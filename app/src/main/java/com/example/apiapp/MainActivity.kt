@@ -3,16 +3,8 @@ package com.example.apiapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.apiapp.ui.PostListScreen
 import com.example.apiapp.ui.theme.APIAppTheme
 import com.example.apiapp.viewModel.PostViewModel
 
@@ -20,7 +12,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MaterialTheme {
+            APIAppTheme {
                 val postViewModel: PostViewModel = viewModel()
                 PostListScreen(viewModel = postViewModel)
             }
